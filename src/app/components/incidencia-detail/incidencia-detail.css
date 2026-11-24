@@ -1,0 +1,9 @@
+.detail-content { color: #34415a; }
+.detail-code { color: #6060dd; font-weight: 800; font-size: 12px; }
+.detail-content h2 { font-size: 23px; margin: 12px 0; color: #202d45; }
+.detail-badges { display: flex; gap: 9px; margin-bottom: 28px; }
+.detail-badges span { padding: 8px 12px; border-radius: 20px; background: #f0f1ff; color: #5959d9; font-size: 11px; font-weight: 750; }
+.detail-section, .detail-grid { border-top: 1px solid #edf0f5; padding: 20px 0; }
+.detail-content label { color: #9099aa; font-size: 10px; letter-spacing: 1px; font-weight: 800; }
+.detail-content p { font-size: 13px; line-height: 1.8; color: #56637a; }
+.detail-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }

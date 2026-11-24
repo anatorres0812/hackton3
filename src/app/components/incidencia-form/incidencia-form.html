@@ -1,0 +1,54 @@
+<div class="form-content">
+  <div class="field">
+    <label>Título de la incidencia *</label>
+    <input [(ngModel)]="formulario.titulo" name="titulo"
+      placeholder="Ej. Problema de conexión en laboratorio" required maxlength="100">
+  </div>
+
+  <div class="form-grid">
+    <div class="field">
+      <label>Prioridad *</label>
+      <select [(ngModel)]="formulario.prioridad" name="prioridad">
+        <option value="Alta">Alta</option>
+        <option value="Media">Media</option>
+        <option value="Baja">Baja</option>
+      </select>
+    </div>
+
+    <div class="field">
+      <label>Estado *</label>
+      <select [(ngModel)]="formulario.estado" name="estado">
+        <option value="Pendiente">Pendiente</option>
+        <option value="En proceso">En proceso</option>
+        <option value="Resuelta">Resuelta</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="field">
+    <label>Descripción técnica *</label>
+    <textarea [(ngModel)]="formulario.descripcion" name="descripcion"
+      rows="4" placeholder="Describe detalladamente el problema..." required maxlength="1000"></textarea>
+  </div>
+
+  <div class="form-grid">
+    <div class="field">
+      <label>Fecha de registro *</label>
+      <input type="date" [(ngModel)]="formulario.fecha" name="fecha" required>
+    </div>
+
+    <div class="field">
+      <label>Responsable asignado *</label>
+      <input [(ngModel)]="formulario.responsable" name="responsable"
+        placeholder="Nombre del técnico" required maxlength="80">
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <button type="button" class="btn-cancel" (click)="cancelar.emit()">Cancelar</button>
+    <button type="button" class="btn-save" (click)="enviar()"
+      [disabled]="!formulario.titulo.trim() || !formulario.descripcion.trim() || !formulario.responsable.trim() || !formulario.fecha">
+      {{ incidencia ? 'Guardar cambios' : 'Registrar incidencia' }}
+    </button>
+  </div>
+</div>

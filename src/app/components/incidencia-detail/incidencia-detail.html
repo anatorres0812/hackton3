@@ -1,0 +1,29 @@
+@if (incidencia) {
+  <div class="detail-content">
+    <div class="detail-code">{{ incidencia.codigo }}</div>
+
+    <h2>{{ incidencia.titulo }}</h2>
+
+    <div class="detail-badges">
+      <span class="detail-priority">{{ incidencia.prioridad }}</span>
+      <span class="detail-status">{{ incidencia.estado }}</span>
+    </div>
+
+    <div class="detail-section">
+      <label>DESCRIPCIÓN TÉCNICA</label>
+      <p>{{ incidencia.descripcion }}</p>
+    </div>
+
+    <div class="detail-grid">
+      <div>
+        <label>FECHA DE REGISTRO</label>
+        <p>{{ incidencia.fecha | date:'dd/MM/yyyy' }}</p>
+      </div>
+
+      <div>
+        <label>RESPONSABLE ASIGNADO</label>
+        <p>{{ incidencia.responsable }}</p>
+      </div>
+    </div>
+  </div>
+}
